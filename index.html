@@ -65,9 +65,9 @@
 
     <div><!----- Page content Div-->
 
-      <div class="container content"> <!---Page Content--->
+      <div class="content"> <!---Page Content--->
 
-        <div class="dataDiv">
+        <div class=" container dataDiv">
         <!------Link Div----->
           <div class="my-4" id="linkFormBG"> <!---Use CSS to push DIV past DIV margin---->
             <div class="row p-4 p-md-5" id="linkFormContent">
@@ -98,30 +98,31 @@
           </div>
         </div>
 
-        <div class="container"> <!-----Extra Info Div--->
+        <div class=" container"> <!-----Extra Info Div--->
 
-          <div class="text-white mt-5 text-center extraInfo">
+          <div class="text-white mt-5 text-center extraInfo bg-white">
             <h3 class="m-4">Advanced Statistics</h3>
             <p>Track how your links are performing across the web with out advanced statistics dashboard</p>
           </div>
 
-          <div class=" row options">
-            <div class="col-12 col-md-4 bulletOptions my-5 p-5 text-center">
-              <img src="public/images/icon-brand-recognition.svg" alt="options-icon1">
-              <h5>Brand Recognition</h5>
-              <p class="mt-4">Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instol confidence in your content.</p>
-            </div>
-            <div class="col-12 col-md-4 bulletOptions mb-5 p-5 text-center">
-              <img src="public/images/icon-detailed-records.svg" alt="options-icon2">
-              <h5>Detailed Records</h5>
-              <p class="mt-4">Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instol confidence in your content.</p>
-            </div>
-            <div class="col-12 col-md-4 bulletOptions mb-5 p-5 text-center">
-              <img src="public/images/icon-fully-customizable.svg" alt="options-icon3">
-              <h5>Fully Customizable</h5>
-              <p class="mt-4">Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instol confidence in your content.</p>
-            </div>
 
+          <!-----   Row Options------>
+          <div class="row text-center align-items-center p-3">
+            <div class="col-12 col-md-4 bg-white my-4 p-4 list">
+              <img src="public/images/icon-brand-recognition.svg" alt="options-icon1">
+              <h5 class="my-4">Brand Recognition</h5>
+              <p>Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instol confidence in your content.</p>
+            </div>
+            <div class="col-12 col-md-4 bg-white my-4 p-4 list">
+              <img src="public/images/icon-detailed-records.svg" alt="options-icon2">
+              <h5 class="my-4">Detailed Records</h5>
+              <p>Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instol confidence in your content.</p>
+            </div>
+            <div class="col-12 col-md-4 bg-white my-4 p-4 list">
+              <img src="public/images/icon-fully-customizable.svg" alt="options-icon3">
+              <h5 class="my-4">Fully Customizable</h5>
+              <p>Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instol confidence in your content.</p>
+            </div>
           </div>
 
         </div>
@@ -132,10 +133,16 @@
 
     <!-----Call to Action------>
     <div class="cta"> 
-      <div class="container ">
-        <h4 class="text-white">Boost your links today</h4>
-        <button class="ctaButton mt-3">Get Started</button>
+      <div class="container">
+        <div class="row" style="height: 30vh;">
+          <div class="col align-self-center text-center">
+            <h4 class="text-white">Boost your links today</h4>
+            <button class="ctaButton mt-3">Get Started</button>
+          </div>
+        </div>
       </div>
+
+
     </div>
 
   </main>
@@ -144,46 +151,48 @@
   <!-------Footer------------>
   <footer>
 
-    <div class="container row p-5">
-      
-      <div class="col-12 col-md-3 mb-4 mb-md-0 text-center"> <!---Brand Name--->
-        <h4 class="text-white mb-3 footerBrandName">Prune</h4> <!----change heading class-->
-      </div>
+    <div class="container">
+      <div class="row p-5">
+        
+        <div class="col-12 col-md-3 mb-4 mb-md-0 text-center"> <!---Brand Name--->
+          <h4 class="text-white mb-3 footerBrandName">Prune</h4> <!----change heading class-->
+        </div>
 
-      <div class="features col-12 col-md-2 mb-4 mb-md-0 text-center"> <!----->
-        <h6 class="text-center mb-3">Features</h6>
-        <ul>
-          <li>Link Shortening</li>
-          <li>Branded Links</li>
-          <li>Analytics</li>
-        </ul>
-      </div>
+        <div class="features col-12 col-md-2 mb-4 mb-md-0 text-center"> <!----->
+          <h6 class="text-center mb-3">Features</h6>
+          <ul>
+            <li>Link Shortening</li>
+            <li>Branded Links</li>
+            <li>Analytics</li>
+          </ul>
+        </div>
 
-      <div class="resources col-12 col-md-2 mb-4 mb-md-0 text-center">
-        <h6 class="text-center mb-3">Resources</h6>
-        <ul>
-          <li>Blog</li>
-          <li>Developers</li>
-          <li>Support</li>
-        </ul>
-      </div>
+        <div class="resources col-12 col-md-2 mb-4 mb-md-0 text-center">
+          <h6 class="text-center mb-3">Resources</h6>
+          <ul>
+            <li>Blog</li>
+            <li>Developers</li>
+            <li>Support</li>
+          </ul>
+        </div>
 
-      <div class="company col-12 col-md-2 mb-4 mb-md-0 text-center">
-        <h6 class="text-center mb-3">Company</h6>
-        <ul>
-          <li>About</li>
-          <li>Our Team</li>
-          <li>Careers</li>
-          <li>Contact</li>
-        </ul>
-      </div>
+        <div class="company col-12 col-md-2 mb-4 mb-md-0 text-center">
+          <h6 class="text-center mb-3">Company</h6>
+          <ul>
+            <li>About</li>
+            <li>Our Team</li>
+            <li>Careers</li>
+            <li>Contact</li>
+          </ul>
+        </div>
 
-      <div class="social col-12 col-md-3 mb-5 text-center">
-        <img src="public/images/icon-facebook.svg" alt="facebook-icon">
-        <img src="public/images/icon-twitter.svg" alt="twitter-icon">
-        <img src="public/images/icon-instagram.svg" alt="instagram-icon">
-      </div>
+        <div class="social col-12 col-md-3 mb-5 text-center">
+          <img src="public/images/icon-facebook.svg" alt="facebook-icon">
+          <img src="public/images/icon-twitter.svg" alt="twitter-icon">
+          <img src="public/images/icon-instagram.svg" alt="instagram-icon">
+        </div>
 
+      </div>
     </div>
     
   </footer>

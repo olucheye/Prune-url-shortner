@@ -89,23 +89,45 @@ h3{
     font-weight: 700;
 }
 
-.extraInfo p{
-    color: white;
+/*====== OPTIONS =====*/
+
+.list{
+    border-radius: 5px;
 }
 
-.bulletOptions{
-    background-color: white;
-} 
+.list img{
+    background-color: hsl(260, 8%, 14%);
+    padding: 20px;
+    border-radius: 100px;
+    margin-top: -70px;
+}
+
+h5{
+    color: hsl(260, 8%, 14%);
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.list p{
+    font-size: 14px;
+    letter-spacing: .3px;
+    line-height: 30px;
+    color: hsl(257, 7%, 63%);
+}
+
+/*====== CTA =====*/
 
 .cta{
-    height: 35vh;
+    height: 30vh;
     background-color: hsl(257, 27%, 26%);
-    padding: 7em 1em;
-    letter-spacing: 1px;
+    letter-spacing: .8px;
+    /*button styling above in landing section*/
 }
 
 
-/*footer region*/
+
+
+/*=== footer region ===*/
 
 footer{
     background-color: hsl(260, 8%, 14%);
