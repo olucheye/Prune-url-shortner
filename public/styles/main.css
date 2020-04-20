@@ -1,0 +1,141 @@
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.brandName{
+    font-size: 25px;
+    font-weight: 700;
+    color: hsl(260, 8%, 14%);
+}
+
+#heroImg{
+    width: 30em;
+    margin-left: 2.5em;
+}
+
+.heroImg{
+    overflow: hidden;
+}
+
+#landing h2{
+    font-size: 2em;
+    padding: 5px;
+    font-weight: 700;
+    color: hsl(260, 8%, 14%);
+}
+
+#landing p{
+    color: hsl(257, 7%, 63%);
+}
+
+.ctaButton{
+    background-color: hsl(180, 66%, 49%);
+    padding: 15px 45px;
+    border: none;
+    border-radius: 25px;
+}
+
+.content{
+    background-color: hsl(0, 0%, 75%);
+    margin-top: 9em;
+}
+
+
+#linkFormBG{
+    background-color: hsl(257, 27%, 26%);
+    border-radius: 15px;
+}
+
+#input ::placeholder{
+    font-size: 14px;
+    color:hsl(0, 0%, 75%);
+}
+
+.submitURL,
+.copyURL{
+    background-color: hsl(180, 66%, 49%);
+    border: none;
+    border-radius: 5px;
+    padding: .7em 7em;
+}
+
+.prunedData{
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    align-content: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+/*
+.url{
+    border-bottom: 1.5px solid hsl(0, 0%, 75%);
+}
+*/
+
+.url,
+.shortUrl{
+    display: block;
+}
+
+h4{
+    color: hsl(260, 8%, 14%);
+    font-weight: 700;
+}
+
+.extraInfo p{
+    color: white;
+}
+
+.bulletOptions{
+    background-color: white;
+} 
+
+.cta{
+    height: 35vh;
+    background-color: hsl(257, 27%, 26%);
+    padding: 7em 1em;
+    letter-spacing: 1px;
+}
+
+/*footer region*/
+
+footer{
+    background-color: hsl(260, 8%, 14%);
+}
+
+h6{
+    display: block;
+    text-align: left;
+}
+
+h5{
+
+}
+
+
+.features,
+.resources,
+.company{
+    color: white;
+}
+
+.features ul,
+.resources ul,
+.company ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    color: hsl(0, 0%, 75%);
+}
+
+
+.social img{
+    margin: 0 10px;
+}
