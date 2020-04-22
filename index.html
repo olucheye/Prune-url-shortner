@@ -10,24 +10,24 @@
   <!----Google Fonts-->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="public/styles/bootstrap.min.css">
+  <!---  <link rel="stylesheet" href="public/styles/bootstrap.min.css"> --->
   <link rel="stylesheet" href="public/styles/main.css">
-  <script src="js/bootstrap.min.js"></script>
-  
+  <!--- <script src="js/bootstrap.min.js"></script> --->
   <title>Shortly URL shortening API Challenge</title>
 </head>
 <body>
+
   <header>
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light">
         
         <a class="navbar-brand brandName" href="#">Prune</a>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#pruneNavbar" aria-controls="pruneNavbar" aria-expanded="false" aria-label="Toggle pruneNavbar">
           <span class="navbar-toggler-icon"></span>
         </button>
       
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <div class="collapse navbar-collapse" id="pruneNavbar">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
               <a class="nav-link" href="#"> Features <span class="sr-only">(current)</span></a>
@@ -36,12 +36,17 @@
               <a class="nav-link" href="#">Pricing</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              <a class="nav-link" href="#">Resources</a>
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <button type="button" class="btn btn-primary navbar-btn">Login</button>
+            <input type="button" value="Login">
+            <input type="button" class="mx-4" value="Signup">
+
+            <!------
+            <button type="button" class="btn btn-outline-warning navbar-btn"></button>
             <button type="button" class="btn btn-primary mx-5">Signup</button>
+            ------->
           </ul>
         </div>
       </nav>
@@ -50,20 +55,20 @@
 
   <main>
     <!-----------Landing Hero Div---------->
-    <div class="container-fluid">
+    <div class="container">
       <div class="row mt-5">
-        <div class="col-12 col-md-6 col-lg-5 order-md-2 heroImg"> <!----Hero Img-->
+        <div class="col-12 col-md-7 order-md-2 heroImg"> <!----Hero Img-->
           <img src="public/images/illustration-working.svg" alt="landing-page-img" id="heroImg">
         </div>
-        <div class="col-12 col-md-6 col-lg-7 mt-5 text-center order-md-1" id="landing">
+        <div class="col-12 col-md-5 mt-5 text-center text-md-left order-md-1" id="landing">
           <h2> More than just shorter links</h2>
-          <p class="my-4">Build your brand's recognition and get detailed insights on how your links are performing.</p>
-          <button class="btn btn-secondary ctaButton mt-3 text-white">Get Started</button>
+          <p class="my-4 my-md-1">Build your brand's recognition and get detailed insights on how your links are performing.</p>
+          <button class="btn btn-secondary ctaButton mt-3 mt-md-4 text-white">Get Started</button>
         </div>
       </div>
     </div>
 
-    <div class="mt-5">
+    <div class="mt-5 ">
       <div class="content"> 
 
           <!---Form & Result Div--->
@@ -81,7 +86,7 @@
                   </button>
                 </div>
 
-                <p class="urlError text-danger col-12"> jvjvk jvhkj jh</p>
+                <p class="urlError text-danger col-12"> </p>
 
               </div>
 
@@ -89,11 +94,11 @@
             <div class="my-4 prunedData"> 
               <div class="row p-3 mx-auto align-items-center">
                 <div class="col-12 col-md-7">
-                  <p class="url text-truncate">test jhfjhb jkbsbjhks skjsdbkjs </p>
+                  <p class="url text-truncate"> </p>
                 </div>
                 
                 <div class="col-12 col-md-3">
-                    <p class="shortUrl text-truncate">tes kskjsjkskst</p>
+                    <p class="shortUrl text-truncate"> </p>
                 </div>
 
                 <div class="col-12 col-md-2">
@@ -104,26 +109,26 @@
 
         </div>
 
-        <div class=" container"> <!-----Extra Info Div--->
+        <div class=" container mt-5"> <!-----Extra Info Div--->
 
           <div class="text-center">
             <h3 class="my-3">Advanced Statistics</h3>
-            <p class="text-white">Track how your links are performing across the web with out advanced statistics dashboard</p>
+            <p class="text-white text-md-center col col-md-7 mx-auto">Track how your links are performing across the web with our advanced statistics dashboard</p>
           </div>
 
           <!-----   Row Options------>
-          <div class="row text-center align-items-center p-3">
-            <div class="col-12 col-md-4 bg-white my-5 p-4 list">
+          <div class="row text-center align-items-center p-3 p-md-0 rowOptions">
+            <div class="col-12 col-md-3 bg-white my-5 p-4 align-self-start list">
               <img src="public/images/icon-brand-recognition.svg" alt="options-icon1">
               <h5 class="my-4">Brand Recognition</h5>
               <p>Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instol confidence in your content.</p>
             </div>
-            <div class="col-12 col-md-4 bg-white my-5 p-4 list">
+            <div class="col-12 col-md-3 bg-white my-5 p-4 align-self-center  list">
               <img src="public/images/icon-detailed-records.svg" alt="options-icon2">
               <h5 class="my-4">Detailed Records</h5>
               <p>Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instol confidence in your content.</p>
             </div>
-            <div class="col-12 col-md-4 bg-white my-5 p-4 list">
+            <div class="col-12 col-md-3 bg-white my-5 p-4 align-self-end  list">
               <img src="public/images/icon-fully-customizable.svg" alt="options-icon3">
               <h5 class="my-4">Fully Customizable</h5>
               <p>Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instol confidence in your content.</p>
@@ -158,12 +163,12 @@
     <div class="container">
       <div class="row p-5">
         
-        <div class="col-12 col-md-3 mb-4 mb-md-0 text-center"> <!---Brand Name--->
+        <div class="col-12 col-md-3 mb-4 mb-md-0 text-center text-md-left"> <!---Brand Name--->
           <h4 class="text-white mb-3 footerBrandName">Prune</h4> <!----change heading class-->
         </div>
 
-        <div class="features col-12 col-md-2 mb-4 mb-md-0 text-center"> <!----->
-          <h6 class="text-center mb-3">Features</h6>
+        <div class="features col-12 col-md-2 mb-4 mb-md-0 text-center text-md-left"> <!----->
+          <h6 class="text-center text-md-left mb-3">Features</h6>
           <ul>
             <li>Link Shortening</li>
             <li>Branded Links</li>
@@ -171,8 +176,8 @@
           </ul>
         </div>
 
-        <div class="resources col-12 col-md-2 mb-4 mb-md-0 text-center">
-          <h6 class="text-center mb-3">Resources</h6>
+        <div class="resources col-12 col-md-2 mb-4 mb-md-0 text-center text-md-left">
+          <h6 class="text-center text-md-left mb-3">Resources</h6>
           <ul>
             <li>Blog</li>
             <li>Developers</li>
@@ -180,8 +185,8 @@
           </ul>
         </div>
 
-        <div class="company col-12 col-md-2 mb-4 mb-md-0 text-center">
-          <h6 class="text-center mb-3">Company</h6>
+        <div class="company col-12 col-md-2 mb-4 mb-md-0 text-center text-md-left">
+          <h6 class="text-center text-md-left mb-3">Company</h6>
           <ul>
             <li>About</li>
             <li>Our Team</li>

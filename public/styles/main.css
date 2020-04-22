@@ -5,13 +5,15 @@ body{
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+/*====== NAVBAR AREA =====*/
 
 .brandName{
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 700;
     color: hsl(260, 8%, 14%);
 }
 
+/*====== HERO-LANDING PAGE AREA =====*/
 #heroImg{
     width: 30em;
     margin-left: 2.5em;
@@ -34,11 +36,10 @@ body{
 
 .ctaButton{
     background-color: hsl(180, 66%, 49%);
-    padding: 15px 45px;
+    padding: 10px 45px;
     border: none;
     border-radius: 25px;
 }
-
 
 /*====== FORM AREA =====*/
 
@@ -46,9 +47,10 @@ body{
     background-color: hsl(0, 0%, 75%);
 }
 
-
 #linkFormBG{
-    background-color: hsl(257, 27%, 26%);
+    background: hsl(257, 27%, 26%);
+    background-image: url('../images/bg-shorten-mobile.svg');
+    background-repeat: no-repeat;
     border-radius: 8px;
 }
 
@@ -57,17 +59,19 @@ body{
     color:hsl(0, 0%, 75%);
 }
 
+.prunedData{
+    background-color: white;
+    border-radius: 7px;
+    font-size: 14px;
+    display: none;
+}
+
 .submitURL,
 .copyURL{
     background-color: hsl(180, 66%, 49%);
     border: none;
     border-radius: 5px;
-}
-
-.prunedData{
-    background-color: white;
-    border-radius: 7px;
-    /*visibility: hidden;*/
+    font-size: 16px;
 }
 
 /*
@@ -81,12 +85,12 @@ body{
     display: block;
 }
 
-
 /*====== OPTIONS HEADER =====*/
 
 h3{
     color: hsl(260, 8%, 14%);
     font-weight: 700;
+    font-size: 30px;
 }
 
 /*====== OPTIONS LIST =====*/
@@ -119,12 +123,11 @@ h5{
 
 .cta{
     height: 30vh;
-    background-color: hsl(257, 27%, 26%);
+    background: hsl(257, 27%, 26%);
+    background-image: url('../images/bg-boost-mobile.svg'); background-repeat: no-repeat;
     letter-spacing: .8px;
     /*button styling above in landing section*/
 }
-
-
 
 
 /*=== footer region ===*/
@@ -133,13 +136,17 @@ footer{
     background-color: hsl(260, 8%, 14%);
 }
 
+h4{
+    font-size: 28px;
+    font-weight: 500;
+}
+
 h6{
     display: block;
     text-align: left;
     color: white;
     font-size: 16px;
 }
-
 
 .features ul,
 .resources ul,
@@ -151,7 +158,62 @@ h6{
     font-size: 14px;
 }
 
-
 .social img{
     margin: 0 10px;
 }
+
+
+@media (min-width: 992px){
+
+    #heroImg{
+        width: 35em;
+    }
+
+    
+    .heroImg{
+       /* overflow: visible;*/
+       margin-right: -5em;
+
+    }
+    
+    #landing h2{
+        font-size: 2.7em;
+    }
+
+    #landing p{
+        font-size: .9em;
+    }
+
+    .submitURL,
+    .copyURL{
+        font-size: 18px;
+    }
+
+
+    .rowOptions{
+        justify-content: space-around;
+        height: 70vh;
+    }
+
+    .list img{
+      margin-left: -8em;
+    }
+
+    #linkFormBG{
+        background-image: url('../images/bg-shorten-desktop.svg');
+    }
+
+    .cta{
+        height: 30vh;
+        background-image: url('../images/bg-boost-desktop.svg');
+        /*button styling above in landing section*/
+    }
+
+    .features ul li,
+    .resources ul li,
+    .company ul li{
+        padding: 4px;
+    }
+
+}
+     
