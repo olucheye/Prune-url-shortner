@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
   <!----Google Fonts-->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="public/styles/bootstrap.min.css">
   <link rel="stylesheet" href="public/styles/main.css">
@@ -49,7 +49,7 @@
   </header>
 
   <main>
-    <!-----------Hero Div---------->
+    <!-----------Landing Hero Div---------->
     <div class="container-fluid">
       <div class="row mt-5">
         <div class="col-12 col-md-6 col-lg-5 order-md-2 heroImg"> <!----Hero Img-->
@@ -63,62 +63,67 @@
       </div>
     </div>
 
-    <div><!----- Page content Div-->
+    <div class="mt-5">
+      <div class="content"> 
 
-      <div class="content"> <!---Page Content--->
+          <!---Form & Result Div--->
+        <div class="container p-4">
+          <!------Link Form Div----->
+              <div class="row p-3 p-md-4 align-items-center mx-auto" id="linkFormBG">
+                
+                <div class="col-12 col-md-9" id="input">
+                  <input type="text" name="url" id="url" class="form-control form-control-lg" placeholder="Shorten a link here...">
+                </div>
 
-        <div class=" container dataDiv">
-        <!------Link Div----->
-          <div class="my-4" id="linkFormBG"> <!---Use CSS to push DIV past DIV margin---->
-            <div class="row p-4 p-md-5" id="linkFormContent">
-              <div class="col-12 col-md-8 mx-auto " id="input">
-                <input type="text" name="url" id="url" placeholder="Shorten a link here..." class="form-control form-control-lg">
+                <div class="col-12 col-md-3 text-center ">
+                  <button type="submit" class="mt-4 mt-md-0 btn btn-secondary btn-lg btn-block submitURL">
+                    Shorten It
+                  </button>
+                </div>
+
+                <p class="urlError text-danger col-12"> jvjvk jvhkj jh</p>
+
               </div>
-              <div class="col-12 col-md-3 ml-1">
-                <input type="submit" value="Shorten It" class="mt-4 submitURL">
+
+              <!------Result DIV---->
+            <div class="my-4 prunedData"> 
+              <div class="row p-3 mx-auto align-items-center">
+                <div class="col-12 col-md-7">
+                  <p class="url text-truncate">test jhfjhb jkbsbjhks skjsdbkjs </p>
+                </div>
+                
+                <div class="col-12 col-md-3">
+                    <p class="shortUrl text-truncate">tes kskjsjkskst</p>
+                </div>
+
+                <div class="col-12 col-md-2">
+                  <button onclick="copy()" class=" btn btn-secondary btn-lg btn-block copyURL">Copy</button>
+                </div>
               </div>
-              <p class="urlError"></p>
             </div>
-          </div>
 
-            <!------Result DIV---->
-          <div class="my-4 prunedData"> <!--Set display of Div to hidden----->
-            <div class="row p-3">
-              <div class="col-12 col-md-7">
-                <p class="url text-truncate">test</p>
-              </div>
-              <hr>
-              <div class="col-12 col-md-3">
-                <p class="shortUrl text-truncate">test</p>
-              </div>
-              <div class="col-12 col-md-2">
-                <button onclick="copy()" class="copyURL">Copy</button>
-              </div>
-            </div>
-          </div>
         </div>
 
         <div class=" container"> <!-----Extra Info Div--->
 
-          <div class="text-white mt-5 text-center extraInfo bg-white">
-            <h3 class="m-4">Advanced Statistics</h3>
-            <p>Track how your links are performing across the web with out advanced statistics dashboard</p>
+          <div class="text-center">
+            <h3 class="my-3">Advanced Statistics</h3>
+            <p class="text-white">Track how your links are performing across the web with out advanced statistics dashboard</p>
           </div>
-
 
           <!-----   Row Options------>
           <div class="row text-center align-items-center p-3">
-            <div class="col-12 col-md-4 bg-white my-4 p-4 list">
+            <div class="col-12 col-md-4 bg-white my-5 p-4 list">
               <img src="public/images/icon-brand-recognition.svg" alt="options-icon1">
               <h5 class="my-4">Brand Recognition</h5>
               <p>Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instol confidence in your content.</p>
             </div>
-            <div class="col-12 col-md-4 bg-white my-4 p-4 list">
+            <div class="col-12 col-md-4 bg-white my-5 p-4 list">
               <img src="public/images/icon-detailed-records.svg" alt="options-icon2">
               <h5 class="my-4">Detailed Records</h5>
               <p>Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instol confidence in your content.</p>
             </div>
-            <div class="col-12 col-md-4 bg-white my-4 p-4 list">
+            <div class="col-12 col-md-4 bg-white my-5 p-4 list">
               <img src="public/images/icon-fully-customizable.svg" alt="options-icon3">
               <h5 class="my-4">Fully Customizable</h5>
               <p>Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instol confidence in your content.</p>
@@ -129,20 +134,19 @@
 
       </div>
 
-    </div>
-
-    <!-----Call to Action------>
-    <div class="cta"> 
-      <div class="container">
-        <div class="row" style="height: 30vh;">
-          <div class="col align-self-center text-center">
-            <h4 class="text-white">Boost your links today</h4>
-            <button class="ctaButton mt-3">Get Started</button>
+      <!-----Call to Action------>
+      <div class="cta"> 
+        <div class="container">
+          <div class="row" style="height: 30vh;">
+            <div class="col align-self-center text-center">
+              <h4 class="text-white">Boost your links today</h4>
+              <button class="ctaButton mt-3">Get Started</button>
+            </div>
           </div>
         </div>
+
+
       </div>
-
-
     </div>
 
   </main>

@@ -3,7 +3,6 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-size: 16px;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -40,15 +39,17 @@ body{
     border-radius: 25px;
 }
 
+
+/*====== FORM AREA =====*/
+
 .content{
     background-color: hsl(0, 0%, 75%);
-    margin-top: 9em;
 }
 
 
 #linkFormBG{
     background-color: hsl(257, 27%, 26%);
-    border-radius: 15px;
+    border-radius: 8px;
 }
 
 #input ::placeholder{
@@ -61,16 +62,12 @@ body{
     background-color: hsl(180, 66%, 49%);
     border: none;
     border-radius: 5px;
-    padding: .7em 7em;
 }
 
 .prunedData{
     background-color: white;
-    border-radius: 5px;
-    overflow: hidden;
-    align-content: center;
-    justify-content: center;
-    visibility: hidden;
+    border-radius: 7px;
+    /*visibility: hidden;*/
 }
 
 /*
@@ -84,12 +81,15 @@ body{
     display: block;
 }
 
+
+/*====== OPTIONS HEADER =====*/
+
 h3{
     color: hsl(260, 8%, 14%);
     font-weight: 700;
 }
 
-/*====== OPTIONS =====*/
+/*====== OPTIONS LIST =====*/
 
 .list{
     border-radius: 5px;
@@ -98,20 +98,20 @@ h3{
 .list img{
     background-color: hsl(260, 8%, 14%);
     padding: 20px;
-    border-radius: 100px;
-    margin-top: -70px;
+    border-radius: 50px;
+    margin-top: -60px;
 }
 
 h5{
     color: hsl(260, 8%, 14%);
     font-weight: 700;
-    font-size: 22px;
+    font-size: 21px;
 }
 
 .list p{
     font-size: 14px;
     letter-spacing: .3px;
-    line-height: 30px;
+    line-height: 25px;
     color: hsl(257, 7%, 63%);
 }
 
