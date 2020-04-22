@@ -13,6 +13,11 @@ body{
     color: hsl(260, 8%, 14%);
 }
 
+.nav-link{
+    text-decoration: none;
+    list-style-type: none;
+}
+
 /*====== HERO-LANDING PAGE AREA =====*/
 #heroImg{
     width: 30em;
@@ -164,16 +169,24 @@ h6{
 
 
 @media (min-width: 992px){
+    
+    .navBtn{
+        background-color: hsl(180, 66%, 49%);
+        padding: 5px 50px;
+        border-radius: 25px;
+        margin: 0 10px;
+        color: white;
+    }
 
     #heroImg{
         width: 35em;
+        margin-right: -15em;
     }
 
     
     .heroImg{
        /* overflow: visible;*/
-       margin-right: -5em;
-
+       border: 2px red solid;
     }
     
     #landing h2{
@@ -189,6 +202,9 @@ h6{
         font-size: 18px;
     }
 
+    h3{
+        font-size: 40px;
+    }
 
     .rowOptions{
         justify-content: space-around;
@@ -204,9 +220,8 @@ h6{
     }
 
     .cta{
-        height: 30vh;
         background-image: url('../images/bg-boost-desktop.svg');
-        /*button styling above in landing section*/
+        background-size: cover;
     }
 
     .features ul li,
@@ -215,5 +230,16 @@ h6{
         padding: 4px;
     }
 
+    .features ul li:hover ,
+    .resources ul li:hover ,
+    .company ul li:hover{
+        color:hsl(180, 66%, 49%);
+    }
+
+
+    .nav-link:hover{
+        color: hsl(260, 8%, 14%);
+        font-weight: 500;
+    }
 }
      
