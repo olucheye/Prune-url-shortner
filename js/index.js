@@ -4,10 +4,12 @@ const domain = "https://rel.ink/";
 
 //global variables
 const longURL = document.querySelector('#longUrl');
-//const uri = "https://www.quickteller.com";
 const submitURL = document.querySelector(".submitURL");
 
-
+//DOM response variables
+const initialURL = document.querySelector('.indexUrl');
+const newURL = document.querySelector('.shortUrl');
+const resultDiv = document.querySelector('.prunedData');
 //validate URL
 /*
 function validURL(longURL) {
@@ -25,6 +27,7 @@ function validURL(longURL) {
 //shortenURL & prevent default
 const shortenUrl = (e) =>{
     pruneLink();
+    addResponse();
     e.preventDefault();
         
 }
@@ -54,11 +57,13 @@ async function pruneLink(){
     }   
 }
 
-// add response back to body
-
+// append response to body
 const addResponse = (data) => {
-    console.log(data.hashid);
-    console.log(data.url);
+
+    initialURL.textContent = data.url
+    newURL.textContent = domain + data.hashid;
+    resultDiv.style.display = 'block';
+
 }
 
 
