@@ -1,44 +1,66 @@
-//call function here & button click
-//pruneLink(); - Cannot call the function because the submit button does
-
-
-
-
-
 //endpoint & url
 const apiEndpoint = 'https://rel.ink/api/links/';
 const domain = "https://rel.ink/";
 
 //global variables
-const longURL = document.querySelector('#url');
-const uri = "https://www.quickteller.com";
+const longURL = document.querySelector('#longUrl');
+//const uri = "https://www.quickteller.com";
+const submitURL = document.querySelector(".submitURL");
 
 
+//validate URL
 /*
-//prevent default from button
-const getURL = document.querySelector(".submitURL").addEventListener("click", function(event){
-
-    pruneLink();
-    event.preventDefault();
-    //set provided url to a variable.
-
-  });
+function validURL(longURL) {
+    if(String(longURL) !== longURL) return false
+    const regex = /(https?:\/\/)?(www\.)?\w{2,}(\.\w{2,}){1,}/g,
+    didMatch = longURL.match(regex)
+    return Array.isArray(didMatch)
+}
 
 */
 
-//define async/await function
-async function pruneLink(uri){
 
-    let res = await fetch(apiEndpoint, {
-        method: 'POST',
-        body: JSON.stringify({url: uri}),
-        headers: {
-            "Content-type": "application/json"
-        }
-    });
 
-    let data = await res.json();
-    console.log(data);
+
+//shortenURL & prevent default
+const shortenUrl = (e) =>{
+    pruneLink();
+    e.preventDefault();
+        
 }
 
-pruneLink(uri);
+//define async/await function
+async function pruneLink(){
+    
+    let inputUrl = longURL.value;
+
+    try {
+        let res = await fetch(apiEndpoint, {
+            method: 'POST',
+            body: JSON.stringify({url: inputUrl}),
+            headers: {
+                "Content-type": "application/json"
+            }
+        });
+
+        if(res.ok){
+            let data = await res.json();
+            return addResponse(data);
+        }else{
+            console.log('error')
+        }   
+    } catch (error) {
+        console.log(error)
+    }   
+}
+
+// add response back to body
+
+const addResponse = (data) => {
+    console.log(data.hashid);
+    console.log(data.url);
+}
+
+
+// add Event Listener to Submit button
+submitURL.addEventListener("click", shortenUrl);
