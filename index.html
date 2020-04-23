@@ -10,7 +10,7 @@
   <!----Google Fonts-->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
 
-  <!---  <link rel="stylesheet" href="public/styles/bootstrap.min.css"> --->
+  <link rel="stylesheet" href="public/styles/bootstrap.min.css">
   <link rel="stylesheet" href="public/styles/main.css">
   <!--- <script src="js/bootstrap.min.js"></script> --->
   <title>Shortly URL shortening API Challenge</title>
@@ -83,7 +83,7 @@
                 </div>
 
                 <div class="col-12 col-md-3 text-center ">
-                  <button type="submit" class="mt-4 mt-md-0 btn btn-secondary btn-lg btn-block submitURL">
+                  <button type="submit" class="mt-4 mt-md-0 btn btn-secondary btn-lg btn-block submitURL" onclick="pruneLink()">
                     Shorten It
                   </button>
                 </div>
@@ -157,8 +157,6 @@
     </div>
 
   </main>
-
-
   <!-------Footer------------>
   <footer>
 
