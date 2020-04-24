@@ -4,12 +4,16 @@ const domain = "https://rel.ink/";
 
 //global variables
 const longURL = document.querySelector('#longUrl');
-const submitURL = document.querySelector(".submitURL");
+const submitURL = document.querySelector('.submitURL');
+const copyURL = document.querySelector('.copyURL');
+const errorURL = document.querySelector('.urlError');
 
 //DOM response variables
 const initialURL = document.querySelector('.indexUrl');
 const newURL = document.querySelector('.shortUrl');
 const resultDiv = document.querySelector('.prunedData');
+
+
 //validate URL
 /*
 function validURL(longURL) {
@@ -21,6 +25,16 @@ function validURL(longURL) {
 
 */
 
+//Call Error Function
+
+function error(){
+
+    errorURL.textContent = "Please provide a valid URL";
+    setTimeout(() => {
+    errorURL.textContent = "";
+    }, 2000);
+   
+}
 
 
 
@@ -28,15 +42,14 @@ function validURL(longURL) {
 const shortenUrl = (e) =>{
     pruneLink();
     addResponse();
-    e.preventDefault();
-        
+    e.preventDefault();      
 }
 
 //define async/await function
 async function pruneLink(){
     
-    let inputUrl = longURL.value;
-
+    let inputUrl = longURL.value.trim(); //remove whitespaces from URL
+    
     try {
         let res = await fetch(apiEndpoint, {
             method: 'POST',
@@ -50,22 +63,38 @@ async function pruneLink(){
             let data = await res.json();
             return addResponse(data);
         }else{
-            console.log('error')
+            error();
+            // console.log('Please provide a valid URL')
         }   
     } catch (error) {
         console.log(error)
-    }   
+    } 
 }
 
 // append response to body
-const addResponse = (data) => {
+function addResponse(info){
 
-    initialURL.textContent = data.url
-    newURL.textContent = domain + data.hashid;
+    let{hashid, url} = info;
+
+    initialURL.textContent = url
+    newURL.textContent = domain + hashid
     resultDiv.style.display = 'block';
 
 }
 
+/*
+//copy text from button
+let copyPrunedURL = () =>{
+
+    let url = document.querySelector('.shortUrl');
+    url.select();
+    url.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+
+}
+*/
 
 // add Event Listener to Submit button
 submitURL.addEventListener("click", shortenUrl);
+// event listener for copy button
+//copyURL.addEventListener("click", copyPrunedURL);

@@ -13,10 +13,13 @@ body{
     color: hsl(260, 8%, 14%);
 }
 
+/*
 .nav-link{
     text-decoration: none;
     list-style-type: none;
 }
+
+*/
 
 /*====== HERO-LANDING PAGE AREA =====*/
 #heroImg{
@@ -68,7 +71,8 @@ body{
     background-color: white;
     border-radius: 7px;
     font-size: 14px;
-    display: none;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    /*display: none; */
 }
 
 .submitURL,
@@ -79,6 +83,15 @@ body{
     font-size: 16px;
 }
 
+.indexUrl{
+    color: hsl(260, 8%, 14%);
+    font-weight: 500;
+}
+
+.shortUrl{
+    color: hsl(180, 66%, 49%);
+    font-weight: 500;
+}
 /*
 .url{
     border-bottom: 1.5px solid hsl(0, 0%, 75%);
@@ -102,6 +115,7 @@ h3{
 
 .list{
     border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 .list img{
@@ -120,7 +134,7 @@ h5{
 .list p{
     font-size: 14px;
     letter-spacing: .3px;
-    line-height: 25px;
+    line-height: 24px;
     color: hsl(257, 7%, 63%);
 }
 
@@ -167,27 +181,42 @@ h6{
     margin: 0 10px;
 }
 
+/*
+@media only screen and (min-width: ) and (max-width: 1200px){
+ 
 
+}
+*/
+
+/* Medium Screen (Tablets) and above*/
 @media (min-width: 992px){
+
+    body{
+        font-size: 18px;
+    }
     
-    .navBtn{
-        background-color: hsl(180, 66%, 49%);
-        padding: 5px 50px;
-        border-radius: 25px;
-        margin: 0 10px;
-        color: white;
+    .links:hover{
+        color: hsl(260, 8%, 14%);
+        font-weight: 700;
+    }
+
+    .auth{
+        font-weight: 700;
+        margin: 0px 10px;
+    }
+
+    .auth:hover{
+        padding: 8px 10px;
+        background-color:  hsl(180, 66%, 49%);
+        border-radius: 7px;
+        color: #fff;
     }
 
     #heroImg{
         width: 35em;
         margin-right: -15em;
     }
-
     
-    .heroImg{
-       /* overflow: visible;*/
-       border: 2px red solid;
-    }
     
     #landing h2{
         font-size: 2.7em;
@@ -197,9 +226,15 @@ h6{
         font-size: .9em;
     }
 
-    .submitURL,
-    .copyURL{
-        font-size: 18px;
+    .submitURL:hover,
+    .copyURL:hover{
+        background-color: hsl(180, 66%, 49%);
+        color: hsl(257, 7%, 63%);
+    }
+
+    .indexUrl,
+    .shortUrl{
+       font-size: 18px;
     }
 
     h3{
@@ -208,7 +243,11 @@ h6{
 
     .rowOptions{
         justify-content: space-around;
-        height: 70vh;
+        height: 58vh;
+    }
+
+    .list p{
+        font-size: 13px;
     }
 
     .list img{
@@ -236,19 +275,27 @@ h6{
         color:hsl(180, 66%, 49%);
     }
 
+    /*when the copy button is clicked*/
 
-    .nav-link:hover{
-        color: hsl(260, 8%, 14%);
-        font-weight: 500;
+    .copiedURL{
+        background-color: hsl(260, 8%, 14%);
+        color: white;
+        /*js changes innerHTML to copied*/
     }
 }
      
+/* Large Screens (Desktops) and above*/
+@media (min-width: 1200px){
+    .heroImg{
+        overflow: visible;
+     }
+
+}
 
 /*
 TO-DO
 
 - fix signup and login buttons
-- color for response links
 - host on netlify
 - short corrections to view on medium screens
 */
