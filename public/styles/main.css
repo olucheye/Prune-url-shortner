@@ -72,7 +72,7 @@ body{
     border-radius: 7px;
     font-size: 14px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    /*display: none; */
+    display: none;
 }
 
 .submitURL,
@@ -181,6 +181,10 @@ h6{
     margin: 0 10px;
 }
 
+.urlError{
+
+}
+
 /*
 @media only screen and (min-width: ) and (max-width: 1200px){
  
@@ -234,7 +238,7 @@ h6{
 
     .indexUrl,
     .shortUrl{
-       font-size: 18px;
+       font-size: 16px;
     }
 
     h3{
@@ -278,7 +282,7 @@ h6{
     /*when the copy button is clicked*/
 
     .copiedURL{
-        background-color: hsl(260, 8%, 14%);
+        background-color: hsl(257, 27%, 26%);
         color: white;
         /*js changes innerHTML to copied*/
     }
@@ -294,8 +298,6 @@ h6{
 
 /*
 TO-DO
-
-- fix signup and login buttons
 - host on netlify
-- short corrections to view on medium screens
+- automatically create div for elements
 */

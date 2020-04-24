@@ -26,17 +26,14 @@ function validURL(longURL) {
 */
 
 //Call Error Function
-
 function error(){
 
     errorURL.textContent = "Please provide a valid URL";
     setTimeout(() => {
     errorURL.textContent = "";
-    }, 2000);
+    }, 3000);
    
 }
-
-
 
 //shortenURL & prevent default
 const shortenUrl = (e) =>{
@@ -82,19 +79,36 @@ function addResponse(info){
 
 }
 
-/*
+
+
+
+
 //copy text from button
-let copyPrunedURL = () =>{
+const copyPrunedURL = () =>{
 
-    let url = document.querySelector('.shortUrl');
-    url.select();
-    url.setSelectionRange(0, 99999);
+    const clearInput = longURL.value;
+    const copiedText = newURL.innerHTML;
+    const tempElement = document.createElement("input");
+
+    //creates temporary input field to allow copy
+    tempElement.value = copiedText;
+    document.body.appendChild(tempElement);
+    tempElement.select();
     document.execCommand("copy");
+    tempElement.remove();
 
+    //change button color & text
+    copyURL.classList.add('copiedURL');
+    copyURL.textContent = "Copied!";
+
+    //clear input
+    clearInput.reset();
+
+    
 }
-*/
+
 
 // add Event Listener to Submit button
 submitURL.addEventListener("click", shortenUrl);
 // event listener for copy button
-//copyURL.addEventListener("click", copyPrunedURL);
+copyURL.addEventListener("click", copyPrunedURL);
