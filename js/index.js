@@ -27,16 +27,16 @@ function validURL(longURL) {
 
 //Call Error Function
 function error(){
-
     errorURL.textContent = "Please provide a valid URL";
     setTimeout(() => {
-    errorURL.textContent = "";
-    }, 3000);
+        errorURL.textContent = "";
+    }, 5000);
    
 }
 
 //shortenURL & prevent default
 const shortenUrl = (e) =>{
+    refreshCopy();
     pruneLink();
     addResponse();
     e.preventDefault();      
@@ -80,6 +80,11 @@ function addResponse(info){
 }
 
 
+//clear copy button back to original state
+function refreshCopy(){
+    copyURL.classList.remove('copiedURL');
+    copyURL.textContent = "Copy"; 
+}
 
 
 
@@ -100,6 +105,9 @@ const copyPrunedURL = () =>{
     //change button color & text
     copyURL.classList.add('copiedURL');
     copyURL.textContent = "Copied!";
+
+    //refresh copyButton after 20secs
+    setTimeout(refreshCopy, 20000);
 
     //clear input
     clearInput.reset();
