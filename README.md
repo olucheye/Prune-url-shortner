@@ -1,8 +1,6 @@
 # Frontend Mentor -  URL shortening API Challenge
 
-![Design preview for the URL shortening API coding challenge](./design/desktop-preview.jpg)
-
-
+![Web App Screenshot](https://i.imgur.com/iRl2tt9.png)
 
 ## LIVE-SITE
 
